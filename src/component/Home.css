@@ -1,0 +1,77 @@
+.Home__container{
+    
+    transition: 0.4s;
+    height: 100vh;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+
+
+}
+
+
+/*css for button styling */
+.btn{
+    width:200px;
+    border: 1px solid black;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.add{
+    color:green;
+}
+
+.remove{
+    color:red;
+}
+
+.btn:hover{
+    color: #fff;
+
+}
+
+
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: 0.8s;
+  }
+
+  .add:before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+    background: green;
+
+  }
+
+  .remove:before{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+    background: red;
+
+  }
+
+  .btn:hover::before{
+    height: 180%;
+  }
+
+
+  /* css tp change background color */
+
+  .addClicked{
+      transition: 0.4s;
+      background-color: #3498db;
+  }
